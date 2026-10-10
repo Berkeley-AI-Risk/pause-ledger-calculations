@@ -1245,7 +1245,7 @@ K.miss.us <- sum(hold.us[, "missing"]); K.miss.cn <- sum(hold.cn[, "missing"])
 div.miss <- function(off = off.div, D = smuggled.ye2026) { fd <- fail[["diverted", "all"]]                    # what the diverted stock adds to China's missing stock
   D * ((1 - off - v.off) * (w.out * fd + mu[2] * (1 - fd)) + off * (w.off * fd + mu[3] * (1 - fd)) + v.off * (fd + mu[4] * (1 - fd))) }
 signif(100 * fail, 3)        # failed, % of the year-end 2026 stock: all failures, and those after the warranty
-tab <- function(m) cbind("Q (k H100e)" = round(m[, "Q"] / 1e3), "failed (k)" = round(m[, "failed"] / 1e3, 2), "of which missing (k)" = round(m[, "miss.failed"] / 1e3, 2),
+tab <- function(m) cbind("Q (k H100e)" = round(m[, "Q"] / 1e3), "failed (k)" = round(m[, "failed"] / 1e3, 2), "failed chips missing (k)" = round(m[, "miss.failed"] / 1e3, 2),
                          "functional (k)" = round(m[, "functional"] / 1e3), "mu (%)" = signif(100 * m[, "mu"], 2), "functional missing (k)" = round(m[, "miss.fun"] / 1e3, 2),
                          "total missing (k)" = round(m[, "missing"] / 1e3, 2))
 tab(hold.us); tab(hold.cn)
